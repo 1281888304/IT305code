@@ -2,24 +2,29 @@
 
 //Turn on error reporting -- this is critical!
 ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
+/*echo "<pre>";
+var_dump($_SERVER);
+echo "</pre>";*/
 
 // header
-$title = "Admin Page";
+$title = "Page 1";
 require('includes/check-login.php');
 require('includes/header.php');
 
-?>
 
+?>
 
 <body>
 
 <div class="container">
     <?php
-    include("includes/navbar.html");
+    include ("includes/navbar.html");
     ?>
-    <h1>Admin Page</h1>
-    <p>This page contains super-sensitive data</p>
+
+    <h1>Page 1</h1>
+    <p>This is another page containing super-sensitive data</p>
 </div>
 
 <script src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>

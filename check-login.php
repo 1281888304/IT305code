@@ -1,16 +1,16 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+//Turn on error reporting -- this is critical!
 
 
-
-//see if user login
+//See if the user is logged in
 session_start();
 
-if(!isset($_SESSION['un'])) {  // if it is not login
+//If not logged in
+if (!isset($_SESSION['un'])) {
 
-    //store current location
+    //Store current location
     $_SESSION['page'] = $_SERVER["SCRIPT_URI"];
 
-    header("location: login.php"); // from one page to login page
+    //Redirect to login page - must come before anything, cannot below any php that has an output
+    header("location: login.php");
 }
